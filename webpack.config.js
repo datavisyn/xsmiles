@@ -50,7 +50,6 @@ module.exports = [
             watchFiles: ["src/**/*", "public/**/*", "node_modules/extended-smiles-drawer/dist/index.js"],
             // client: { progress: true },
         },
-
         module: {
             rules: [
                 {
@@ -96,8 +95,8 @@ module.exports = [
             // },
         },
         externals: {
-            "react": "React",
-            "react-dom": "ReactDOM",
+            "react": "react",
+            "react-dom": "react-dom",
         },
         module: {
             rules: [
@@ -136,8 +135,8 @@ module.exports = [
             // },
         },
         externals: {
-            "react": "React",
-            "react-dom": "ReactDOM",
+            "react": "react",
+            "react-dom": "react-dom",
         },
         module: {
             rules: [
