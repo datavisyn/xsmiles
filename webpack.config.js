@@ -95,7 +95,10 @@ module.exports = [
             //     react: path.resolve("./node_modules/react"),
             // },
         },
-
+        externals: {
+            "react": "React",
+            "react-dom": "ReactDOM",
+        },
         module: {
             rules: [
                 {
@@ -132,7 +135,10 @@ module.exports = [
             //     react: path.resolve("./node_modules/react"),
             // },
         },
-
+        externals: {
+            "react": "React",
+            "react-dom": "ReactDOM",
+        },
         module: {
             rules: [
                 {
