@@ -1,0 +1,11 @@
+export declare const std: (vector: number[]) => number;
+export declare const median: (values: number[]) => number;
+export declare const mean: (vector: number[]) => number;
+export declare const shortenNumber: (n: number) => number | "?";
+export declare const isEven: (n: number) => boolean;
+export declare const equalNumericLists: (list1: number[], list2: number[], precision?: number) => boolean;
+export declare const clearDivChildren: (parent: HTMLDivElement) => void;
+export declare const isEmptyNullUndefined: <T>(array: T[] | null | undefined) => boolean;
+export declare const equalArrays: <T>(a: T[], b: T[]) => boolean;
+export declare const absoluteMaxFromVector: (numbers: number[]) => number;
+//# sourceMappingURL=util.d.ts.map
