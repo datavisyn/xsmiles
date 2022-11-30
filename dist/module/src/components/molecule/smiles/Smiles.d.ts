@@ -1,4 +1,4 @@
-import { Component } from "react";
+import * as React from "react";
 import "./Smiles.css";
 import { SmilesElement } from "../../../types/molecule.types";
 interface SmilesProps {
@@ -15,7 +15,7 @@ interface SmilesProps {
 interface SmilesState {
     hoverController: boolean;
 }
-declare class Smiles extends Component<SmilesProps, SmilesState> {
+declare class Smiles extends React.Component<SmilesProps, SmilesState> {
     constructor(props: SmilesProps);
     updateComponent: () => void;
     getBarScale(maxBarSize: number): import("d3-scale").ScaleLinear<number, number, never>;

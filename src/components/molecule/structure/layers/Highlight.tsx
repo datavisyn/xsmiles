@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import * as React from "react";
 import { StructureViewConfig } from "../../../../types/structure.types";
 import {
     Vertex,
@@ -20,12 +20,12 @@ interface Props {
 
 
 function Highlight(props: Props) {
-    const didMountRef = useRef(false);
+    const didMountRef = React.useRef(false);
     const divRef = React.createRef<HTMLDivElement>();
 
     const { config, hoverVertices, scaleResolution } = props;
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (didMountRef.current && divRef.current) {
             drawCanvas(divRef.current, config, hoverVertices, scaleResolution);
         } else didMountRef.current = true;

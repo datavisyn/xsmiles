@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { scaleLinear, max, min, color as d3Color } from "d3";
 import colorsService from "../../../services/colors.service";
 interface Props {

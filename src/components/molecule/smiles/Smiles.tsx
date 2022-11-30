@@ -1,4 +1,4 @@
-import { Component, MouseEvent } from "react";
+import * as React from "react";
 import SmilesChar from "./SmilesChar";
 import "./Smiles.css";
 import { SmilesElement } from "../../../types/molecule.types";
@@ -20,7 +20,7 @@ interface SmilesState {
     hoverController: boolean;
 }
 
-class Smiles extends Component<SmilesProps, SmilesState> {
+class Smiles extends React.Component<SmilesProps, SmilesState> {
     constructor(props: SmilesProps) {
         super(props);
         this.state = { hoverController: true };
@@ -112,10 +112,10 @@ class Smiles extends Component<SmilesProps, SmilesState> {
                             return (
                                 <g
                                     key={i}
-                                    onMouseOver={(event: MouseEvent) =>
+                                    onMouseOver={(event: React.MouseEvent) =>
                                         this.onMouseOver(smilesElement)
                                     }
-                                    onMouseOut={(event: MouseEvent) =>
+                                    onMouseOut={(event: React.MouseEvent) =>
                                         this.onMouseOut(smilesElement)
                                     }
                                 >

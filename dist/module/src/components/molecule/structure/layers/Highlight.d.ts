@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { StructureViewConfig } from "../../../../types/structure.types";
 import { Vertex } from "../../../../types/molecule.types";
 interface Props {

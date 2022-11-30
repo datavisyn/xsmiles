@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { StructureViewConfig } from "../../../../types/structure.types";
 import { Molecule, Vertex } from "../../../../types/molecule.types";
 import heatmapService from "../../../../services/heatmap.service";

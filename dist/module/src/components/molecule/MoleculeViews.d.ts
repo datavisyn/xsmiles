@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Method, Molecule, Vertex, RawMolecule } from "../../types/molecule.types";
 import { GradientConfig } from "../../types/gradient.types";
 import { MoleculeViewsConfig } from "../../types/moleculeViews.types";
