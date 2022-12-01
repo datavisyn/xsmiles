@@ -9,3 +9,13 @@
     font-family: "Courier New", Courier, monospace;
     font-weight: bolder;
 }
+
+
+.smiles-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.smiles-justify-content-center {
+    justify-content: center;
+}

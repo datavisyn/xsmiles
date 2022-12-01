@@ -1,4 +1,4 @@
-import { SingleView, appendSingleView, Props as SProps, Molecule as SingleMolecule, MoleculeWithMethods as MWM  } from "./modules/SingleView";
+import { SingleView, Props as SProps, Molecule as SingleMolecule, MoleculeWithMethods as MWM  } from "./modules/SingleView";
 import { Method as MolMethod } from "./types/molecule.types";
 import {GradientConfigOverwriteDefaults as ModuleGradientConfig } from "./types/gradient.types";
 import colorsService, {Palette as PaletteImported} from "./services/colors.service";
@@ -26,4 +26,4 @@ export type MoleculeWithMethods = MWM;
 export type Method = MolMethod;
 export type GradientConfig = ModuleGradientConfig;
 export type Palette = PaletteImported;
-export { SingleView, appendSingleView, interpolate, getColorPalettes };
+export { SingleView, interpolate, getColorPalettes };
