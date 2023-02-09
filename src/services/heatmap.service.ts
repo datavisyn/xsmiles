@@ -26,8 +26,6 @@ class HeatmapService {
     parent.style.width = `${parseInt(parent.style.width.replace('px', ''), 10) * scaleResolution}px`;
     parent.style.height = `${parseInt(parent.style.height.replace('px', ''), 10) * scaleResolution}px`;
 
-    console.log(gradient.colors.positive);
-
     const heatmapPos = h337.create({
       container: parent,
       minOpacity,
@@ -47,7 +45,7 @@ class HeatmapService {
     });
 
     const heatmapScalerPos = scaleLinear()
-      .domain([midDomain, midDomain + deadzone, maxDomain])
+      .domain([midDomain, midDomain + deadzone * (maxDomain - midDomain), maxDomain])
       .range([0, 0, 1]);
 
     function scalePos(value: number) {
@@ -58,7 +56,7 @@ class HeatmapService {
     }
 
     const scaleRadiusPos = scaleLinear()
-      .domain([midDomain, midDomain + deadzone, maxDomain])
+      .domain([midDomain, midDomain + deadzone * (maxDomain - midDomain), maxDomain])
       .range([minRadius, minRadius, maxRadius]);
 
     const radiusScalerPos = (value: number) => {
@@ -77,10 +75,8 @@ class HeatmapService {
       })
       .filter((vertex) => vertex.value !== 0);
 
-    console.log([minDomain, minDomain + deadzone, midDomain]);
-
     const heatmapScalerNeg = scaleLinear()
-      .domain([minDomain, midDomain - deadzone, midDomain])
+      .domain([minDomain, midDomain - deadzone * (midDomain - minDomain), midDomain])
       .range([1, 1, 0]);
 
     function scaleNeg(value: number) {
@@ -91,7 +87,7 @@ class HeatmapService {
     }
 
     const scaleRadiusNeg = scaleLinear()
-      .domain([minDomain, midDomain - deadzone, midDomain])
+      .domain([minDomain, midDomain - deadzone * (midDomain - minDomain), midDomain])
       .range([maxRadius, maxRadius, minRadius]);
 
     const radiusScalerNeg = (value: number) => {
