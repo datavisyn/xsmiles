@@ -52,7 +52,6 @@ export default class RDKitDrawer implements Drawer {
     };
 
     if (molecule.substructureHighlight) {
-      console.log('smart', molecule.substructureHighlight);
       const smarts = molecule.substructureHighlight;
       const qmol = window.RDKit.get_qmol(smarts);
       const substr = JSON.parse(rdkitMol.get_substruct_match(qmol));

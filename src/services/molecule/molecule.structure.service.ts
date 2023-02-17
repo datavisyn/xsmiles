@@ -361,7 +361,6 @@ class MoleculeStructureService {
         }
       }
     } catch (error) {
-      console.log(smilesElements);
       throw error;
     }
   };

@@ -28,8 +28,6 @@ class Heatmap extends React.PureComponent<Props> {
     const div = this.divRef.current;
     const { molecule, config, scaleResolution } = this.props;
 
-    console.log(config.gradient);
-
     if (div && !isEmptyNullUndefined(molecule.vertices)) {
       clearDivChildren(div);
       heatmapService.appendHeatmap(div, molecule, config.gradient, scaleResolution);
