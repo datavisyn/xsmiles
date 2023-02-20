@@ -5,6 +5,7 @@ module.exports = [
     {
         target: "web",
         entry: path.resolve(__dirname, "src", "index.tsx"), //"./src/index.tsx",
+        devtool: "source-map",
         output: {
             path: path.resolve(__dirname, "dist", "web"),
             filename: "index.js",
@@ -80,6 +81,7 @@ module.exports = [
     },
     {
         entry: "./src/module.tsx",
+        devtool: "source-map",
         output: {
             path: path.resolve(__dirname, "dist/module/"),
             filename: "index.js",
@@ -118,6 +120,7 @@ module.exports = [
     },
     {
         entry: "./src/module.tsx",
+        devtool: "source-map",
         output: {
             path: path.resolve(__dirname, "dist/plain/"),
             filename: "index.js",
@@ -126,7 +129,6 @@ module.exports = [
             library: "xsmiles"
             // libraryTarget: "commonjs2",
         },
-        // devtool: "source-map",
         resolve: {
             extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
             symlinks: false,

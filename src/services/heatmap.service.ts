@@ -77,7 +77,7 @@ class HeatmapService {
 
     const heatmapScalerNeg = scaleLinear()
       .domain([minDomain, midDomain - deadzone * (midDomain - minDomain), midDomain])
-      .range([1, 1, 0]);
+      .range([1, 0, 0]);
 
     function scaleNeg(value: number) {
       const v = heatmapScalerNeg(value);
