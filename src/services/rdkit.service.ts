@@ -46,17 +46,10 @@ class RDKitServices {
       width: config.width,
       height: config.height,
     };
-    return mol.get_svg_with_highlights(JSON.stringify(drawOpts)) as string;
-  }
-
-  public drawMoleculeCanvas(smiles: string, config: { width: number; height: number }) {
-    const mol = window.RDKit.get_mol(smiles);
-    const drawOpts = {
-      noAtomLabels: true,
-      width: config.width,
-      height: config.height,
-    };
-    return mol.get_svg_with_highlights(JSON.stringify(drawOpts)) as string;
+    const svg = mol.get_svg_with_highlights(JSON.stringify(drawOpts)) as string;
+    // Delete the molecule to allow garbage collection
+    mol.delete();
+    return svg;
   }
 
   private getCommands(pathD: string): string[] {

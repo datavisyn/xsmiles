@@ -9,7 +9,6 @@ class MoleculeStructureService {
       .map((score: number, i: number) => `${i}.atomNote.${score.toFixed(2)}`)
       .join(':');
     const cxsmiles = `${molecule.string} |atomProp:${notes}|`;
-    // window.RDKit.get_mol('O=C([O-])c1cncnc1 |atomProp:0.atomNote.-0.24:1.atomNote.0.11:2.atomNote.0.04:3.atomNote.0.04:4.atomNote.0.03:5.atomNote.-0.54:6.atomNote.0.07:7.atomNote.-0.54:8.atomNote.-0.24|')
     return cxsmiles;
   }
 

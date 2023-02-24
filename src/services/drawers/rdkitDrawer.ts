@@ -97,6 +97,8 @@ export default class RDKitDrawer implements Drawer {
         // atomLabels
       }),
     );
+    // Delete the molecule to allow garbage collection
+    rdkitMol.delete();
 
     this.gVertices = [];
     this.canvas.style.width = `${config.width}px`;
