@@ -55,7 +55,7 @@ interface State {
   molecule: Molecule;
   mouseOverChange: boolean;
   viewsConfig: MoleculeViewsConfig;
-  kdTreeForAtoms: KDBush<Vertex> | undefined;
+  kdTreeForAtoms: KDBush | undefined;
   mouseOverVertices: Vertex[];
 }
 
@@ -185,13 +185,12 @@ class MoleculeViews extends React.Component<Props, State> {
           this.setState({ mouseOverVertices: hoverVertices });
         }
       } else {
-        const index = new KDBush<Vertex>(
-          molecule.vertices, // vertices,
-          (e) => e!.position.x,
-          (e) => e!.position.y,
-          1,
-          Int16Array,
-        );
+        const index = new KDBush(molecule.vertices.length);
+        molecule.vertices.forEach((v) => {
+          index.add(v.position.x, v.position.y);
+        });
+        index.finish();
+
         this.setState({ kdTreeForAtoms: index });
       }
     }
