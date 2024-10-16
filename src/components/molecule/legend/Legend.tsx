@@ -1,10 +1,4 @@
 import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
 import { Method } from '../../../types/molecule.types';
 import { shortenNumber } from '../../../util';
 
@@ -54,7 +48,9 @@ const createDataTable = (props: Props) => {
 export default function Legend(props: Props) {
   const dataTable = createDataTable(props);
 
-  return (
+  return <div>test</div>;
+
+  /* return (
     <div className="xsmiles-table smiles-row smiles-justify-content-center" style={{ opacity: 0.6 }}>
       <TableContainer
         className="xsmiles-table-container smiles-justify-content-center"
@@ -135,5 +131,5 @@ export default function Legend(props: Props) {
         </Table>
       </TableContainer>
     </div>
-  );
+  ); */
 }
